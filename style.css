@@ -564,7 +564,7 @@ footer {
   width: 170px;
 }
 
-.contact .right form .button a {
+.contact .right form .button button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -581,7 +581,7 @@ footer {
   transition: all 0.3s ease;
 }
 
-.contact .right form .button a:hover {
+.contact .right form .button button:hover {
   color: crimson;
   background: none;
 }
