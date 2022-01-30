@@ -111,7 +111,7 @@ html {
 
 .home {
   display: flex;
-  background: url("images/banner-2.jpg") repeat center; /*trocar o background*/
+  background: url("images/banner.png") repeat center; /*trocar o background*/
   height: 100vh;
   color: white;
   min-height: 500px;
@@ -196,7 +196,7 @@ section .title::after {
 .about,
 .services,
 .skills,
-.teams,
+.projects,
 .contact,
 footer {
   font-family: "Poppins", sans-serif;
@@ -213,7 +213,7 @@ footer {
 }
 
 .about .title::after {
-  content: " who I am";
+  content: " quem eu sou ";
 }
 
 .about .about-content .left {
@@ -264,20 +264,20 @@ footer {
 }
 
 .services,
-.teams {
+.projects {
   color: white;
   background: black;
 }
 
 .services .title::before,
-.teams .title::before {
+.projects .title::before {
   background: white;
 }
 
 .services .title::after,
-.teams .title::after {
+.projects .title::after {
   background: black;
-  content: " what I provide";
+  content: " o que ofereço";
 }
 
 .services .serv-content .card {
@@ -319,7 +319,7 @@ footer {
 }
 
 .skills .title::after {
-  content: "what I know";
+  content: "o que eu sei";
 }
 
 .skills .skills-content .column {
@@ -332,26 +332,8 @@ footer {
   margin-bottom: 10px;
 }
 
-.skills .skills-content .left p {
+.skills .skills-content .left ul {
   text-align: justify;
-}
-
-.skills .skills-content .left a {
-  display: inline-block;
-  background: crimson;
-  color: white;
-  font-size: 18px;
-  font-weight: 500;
-  padding: 8px 16px;
-  margin-top: 20px;
-  border-radius: 6px;
-  border: 2px solid crimson;
-  transition: all 0.3s ease;
-}
-
-.skills .skills-content .left a:hover {
-  color: crimson;
-  background: none;
 }
 
 .skills .skills-content .right .bars {
@@ -387,7 +369,7 @@ footer {
 }
 
 .skills-content .right .html::before {
-  width: 90%;
+  width: 80%;
 }
 
 .skills-content .right .css::before {
@@ -395,18 +377,36 @@ footer {
 }
 
 .skills-content .right .js::before {
-  width: 80%;
-}
-
-.skills-content .right .mysql::before {
   width: 70%;
 }
 
-.teams .title::after {
-  content: "who with me";
+.skills .skills-content .right a {
+  background: crimson;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: 2px solid crimson;
+  transition: all 0.3s ease;
 }
 
-.teams .carousel .card {
+.icon {
+  display: inline-block;
+  margin-top: 40px;
+  margin-right: 10px;
+}
+
+.skills .skills-content .right a:hover {
+  color: crimson;
+  background: none;
+}
+
+.projects .title::after {
+  content: "os principais";
+}
+
+.projects .carousel .card {
   background: #222;
   border-radius: 6px;
   padding: 25px 35px;
@@ -414,11 +414,11 @@ footer {
   transition: all 0.3s ease;
 }
 
-.teams .carousel .card:hover {
+.projects .carousel .card:hover {
   background: crimson;
 }
 
-.teams .carousel .card .box {
+.projects .carousel .card .box {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -426,17 +426,17 @@ footer {
   transition: all 0.3s ease;
 }
 
-.teams .carousel .card:hover .box {
+.projects .carousel .card:hover .box {
   transform: scale(1.05);
 }
 
-.teams .carousel .card .text {
+.projects .carousel .card .text {
   font-size: 25px;
   font-weight: 500;
   margin: 10px 0 7px 0;
 }
 
-.teams .carousel .card img {
+.projects .carousel .card img {
   height: 150px;
   width: 150px;
   object-fit: cover;
@@ -445,7 +445,7 @@ footer {
   transition: all 0.3s ease;
 }
 
-.teams .carousel .card:hover img {
+.projects .carousel .card:hover img {
   border-color: white;
 }
 
@@ -475,7 +475,7 @@ footer {
 }
 
 .contact .title::after {
-  content: "get in touch";
+  content: "contate-me";
 }
 
 .contact .contact-content .column {
