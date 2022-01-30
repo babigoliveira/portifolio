@@ -205,28 +205,27 @@
 
         <div class="column right">
           <div class="text">Mensagem:</div>
-          <form action="#">
+          <form>
             <div class="fields">
               <div class="field name">
-                <input type="text" placeholder="Nome" required>
+                <input id="name" type="text" placeholder="Nome" required>
               </div>
 
               <div class="field email">
-                <input type="email" placeholder="Email" required>
+                <input id="email" type="email" placeholder="Email" required>
               </div>
             </div>
 
             <div class="field">
-              <input type="text" placeholder="Assunto" required>
+              <input id="subject" type="text" placeholder="Assunto" required>
             </div>
 
             <div class="field textarea">
-              <textarea cols="30" rows="10" placeholder="Descreva seu projeto..." required></textarea>
+              <textarea id="message" cols="30" rows="10" placeholder="Descreva seu projeto..." required></textarea>
             </div>
 
             <div class="button">
-              <a href="https://api.whatsapp.com/send?phone=+5531985972616&text=Nome%3A%20Jo%C3%A3o%20da%20Silva%0AEmail%3A%20abc%40gmail.com%0AAssunto%3A%20test%0AMensagem%3A%20asdjkl%20asdjklasdjlk"
-                target="_blank">Enviar</a>
+              <button type="submit" id="sendFormButton">Enviar</button>
             </div>
           </form>
         </div>
