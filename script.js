@@ -1,3 +1,24 @@
+function changePrimaryColor(hue) {
+  document
+    .querySelector(":root")
+    .style.setProperty("--primary-color", `hsl(${hue}deg 100% 50%)`);
+}
+
+function walkHueCollors() {
+  const step = 3;
+  let currentHueColor = step;
+
+  setInterval(() => {
+    currentHueColor += step;
+
+    if (currentHueColor >= 360) {
+      currentHueColor = 0;
+    }
+
+    changePrimaryColor(currentHueColor);
+  }, 300);
+}
+
 function submitForm() {
   const name = document.getElementById("name")?.value;
   const email = document.getElementById("email")?.value;
@@ -78,13 +99,6 @@ function configurePageLayout() {
     loop: true,
   });
 
-  new Typed(".typing-2", {
-    strings: ["Desenvolvedora", "Freelancer"],
-    typeSpeed: 100,
-    backSpeed: 60,
-    loop: true,
-  });
-
   $(".menu-btn").click(function () {
     $(".navbar .menu").toggleClass("active");
     $(".menu-btn i").toggleClass("active");
@@ -121,10 +135,10 @@ function loadRepos() {
     dataType: "json",
     async: true,
   }).then((repos) => {
-    repos = repos.map(({ description, html_url, name }) => ({
+    repos = repos.map(({ name, description, html_url }) => ({
+      name,
       description,
       html_url,
-      name,
     }));
 
     const html = repos
@@ -132,9 +146,11 @@ function loadRepos() {
         (repo) => `
           <div class="card">
             <div class="box">
-              <img src="images/github-light.png" alt="">
-              <div class="text">${repo.name}</div>
-              <p>${repo.description}</p>
+             <a href="${repo.html_url}" target ="_blank">
+                <img src="images/github-light.png" alt="imagem do github">
+                <div class="text">${repo.name}</div>
+                <p>${repo.description}</p>
+             </a>
             </div>
           </div>`
       )
@@ -150,4 +166,5 @@ $(document).ready(function () {
   $("#sendFormButton").on("click", submitForm);
   configurePageLayout();
   loadRepos();
+  walkHueCollors();
 });
