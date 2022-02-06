@@ -738,6 +738,10 @@ footer span a:hover {
 }
 
 @media (max-width: 500px) {
+  .about .about-content .right .text {
+    font-size: 20px;
+    font-weight: 400;
+  }
   .home .home-content .text-2 {
     font-size: 50px;
   }
